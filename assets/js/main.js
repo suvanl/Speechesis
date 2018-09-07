@@ -44,7 +44,7 @@ if (synth.onvoiceschanged !== undefined) {
 
 const speak = () => {
     // Return if already speaking
-    if (synth.speaking) return console.error("[Error] Already speaking.");
+    if (synth.speaking) return console.error("[Error]: Already speaking.");
 
     if (textInput.value !== "") {
         // // Background animation
@@ -57,13 +57,13 @@ const speak = () => {
 
         // Speech end event
         speakText.onend = () => {
-            // console.log("[Info] Finished speaking.");
+            // console.log("[Info]: Finished speaking.");
             body.style.background = "#141414";
         };
 
         // Speech error event
         speakText.onerror = () => {
-            console.error("[Error] An error occurred whilst speaking.");
+            console.error("[Error]: An error occurred whilst speaking.");
             body.style.background = "#141414";
         };
 
